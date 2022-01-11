@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    height:100vh;
+    background-image: url("images/travelPic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    position: relative;
+}
+.navBar{
+    display: flex;
+    justify-content: center;
+}
+
+.navBar li{
+    margin-right: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.navBar li a{
+    color: wheat;
+    font-weight: bold;
+}
+
+.menuBar li{
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+.menuBar li a{
+    font-size: 23px;
+    color: whitesmoke;
+}
+
+.menuBar{
+    display: none;
+}
+
+@media (max-width:480px) {
+    .navBar{display: none;}
+    .menuBar{display: block;}
+}
+
+
+.featureSection{
+    height: 198vh;
+    background-color: beige;
+}
+
+.flexible{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature{
+    width: 408px;
+    height: 555px;
+    margin: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+}
+
+.feature img{
+    width: 408px;
+    height: 292px;
+    border-radius: 7px;
+}
+
+.detail{
+    width: 400px;
+    margin:37px auto;
+    height: 150px;
+}
+
+.detail h3,p{
+    margin-top: 10px;
+}
+
+.feature button{
+    margin-top: 15px;
+    padding: 6px 20px;
+    background-color: rgb(59, 50, 44);
+    display: block;
+    margin:-8px auto;
+    color: whitesmoke;
+    border: 0;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.featureSection h1{
+    margin:auto;
+    text-align: center;
+    font-size: 47px;
+    display: block;
+    padding: 100px;
+}
+
+.featureSection h1 span{
+    color: darkgoldenrod;
+}
+
+.featureImg:hover{
+    transform: scale(1.2);
+    transition: all 1s;
+}
+
+.feature button:hover{
+    background-color: darkorange;
+    transition: all 0.7s;
+    cursor: pointer;
+}
+
+.featureImg::before{
+    content: " ";
+    width: 408px;
+    height: 292px;
+    position: absolute;
+    top: -1px;
+    border-radius: 7px;
+}
+
+.featureImg:hover::before{
+    background-color: black;
+    opacity: 0.3;
+    position: absolute;
+}
+.featureImg{
+    position: relative;
+}
+
+.show{
+    width: 100px;
+    background-color: yellow;
+    text-align: center;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 8px;
+    visibility: hidden;
+}
+
+.feature:hover .show{
+    visibility: visible;
+    top: 30%;
+    position: absolute;
+    transition: all 1s;
+}
